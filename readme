@@ -1,0 +1,23 @@
+This is some example of Unit tests ( java & python ) using Allure software to visualize tests results
+We need:
+- allure 2.7   ( download zip + extract in c:\frank\allure-2.7.0 )
+- nginx 1.19.1 ( download zip + extract in c:\frank\nginx1.19.1 )
+- adapt pom.xml in java part to add allure result & report generation
+- pip install pytest and allure-pytest
+
+For Java:
+ mvn clean package
+ mvn -Dmaven.test.failure.ignore=true test allure:report
+
+ to view result
+ 1/ c:\frank\allure-2.7.0\bin\allure serve C:\frank\MathematicTest\target\allure-results
+ 2/ nginx
+ - run nginx on port 8099 with root set to  "C:/frank/MathematicTest/target/site/allure-maven-plugin/";
+ - go to http://localhost:8099/#
+
+For Python:
+
+ n
+ c:\frank\MathematicTest\python>c:\frank\Python37-32\Scripts\py.test.exe BasicMathTest.py --alluredir=c:\temp\allure
+ c:\frank\MathematicTest\python>..\allure-2.7.0\bin\allure serve c:\temp\allure
+ c:\frank\MathematicTest\python>..\allure-2.7.0\bin\allure generate c:\temp\allure
