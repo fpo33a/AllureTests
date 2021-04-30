@@ -1,5 +1,5 @@
 # c:\frank\MathematicTest\python>c:\frank\Python37-32\Scripts\py.test.exe BasicMathTest.py --alluredir=c:\temp\allure
-# c:\frank\MathematicTest\python>..\allure-2.7.0\bin\allure serve c:\temp\allure
+# c:\frank\MathematicTest\python>c:\frank\allure-2.7.0\bin\allure serve c:\temp\allure
 import allure
 import pytest
 
